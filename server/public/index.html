@@ -10,12 +10,34 @@
     <title>CT_SkillTest_V3</title>
   </head>
   <body>
-    <div class="bg-image img1"></div>
-    <div class="bg-image img2"></div>
-    <div class="bg-image img3"></div>
+    <div id="navbar">
+      <a href="javascript:void(0)">01.HISTORY</a>
+      <a href="javascript:void(0)">02.TEAM</a>
+    </div>
+    <div class="content">
+      <div class="bg-image img1"></div>
+      <div class="bg-image img2"></div>
+      <div class="bg-image img3"></div>
 
-    <div class="bg-text" id="Heading-1">LOSANGELES</div>
-    <br />
-    <div class="bg-text" id="Heading-2">MOUNTAINS</div>
+      <div class="bg-text" id="Heading-1">LOSANGELES</div>
+      <br />
+      <div class="bg-text" id="Heading-2">MOUNTAINS</div>
+    </div>
+    <script>
+      window.onscroll = function () {
+        myFunction();
+      };
+
+      var navbar = document.getElementById("navbar");
+      var sticky = navbar.offsetTop;
+
+      function myFunction() {
+        if (window.pageYOffset >= sticky) {
+          navbar.classList.add("sticky");
+        } else {
+          navbar.classList.remove("sticky");
+        }
+      }
+    </script>
   </body>
 </html>

@@ -29,7 +29,29 @@ html {
 .img3 {
   background-image: url("../images/Mtn_Page_3.png");
 }
+#navbar {
+  overflow: hidden;
+  background-color: white;
+  padding-right: 300px;
+}
+#navbar a {
+  float: right;
+  display: block;
+  color: navy;
+  text-align: center;
+  padding: 25px 16px;
+  font-size: 13px;
+}
 
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
 /* Position text in the middle of the page/image */
 .bg-text {
   color: black;
