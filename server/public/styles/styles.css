@@ -11,25 +11,31 @@ html {
 
 .bg-image {
   /* Full height */
-  height: 200vh;
+
+  width: 100%;
 
   /* Center and scale the image nicely */
   background-position: center;
   background-repeat: no-repeat;
+  /* object-fit: cover; */
   background-size: cover;
 }
 
 /* Images used */
 .img1 {
+  height: 1200px;
   background-image: url("../images/Mtn_Page_1.png");
 }
 .img2 {
+  height: 750px;
   background-image: url("../images/Mtn_Page_2.png");
 }
 .img3 {
+  height: 800px;
   background-image: url("../images/Mtn_Page_3.png");
 }
 #navbar {
+  z-index: 4;
   overflow: hidden;
   background-color: white;
   padding-right: 300px;
@@ -66,9 +72,40 @@ html {
 }
 
 #Heading-1 {
-  padding-bottom: 15%;
+  padding-bottom: 10%;
 }
+#overlay {
+  position: relative;
+  display: block;
+  width: 100%;
+  left: 0.6%;
+  right: 0;
+  bottom: 0;
 
+  z-index: 2;
+  cursor: pointer;
+}
+.txt-header {
+  margin: 0%;
+  font-size: 80px;
+  text-align: left;
+  padding-left: 20%;
+  padding-top: 2%;
+}
+.txt-sub-header {
+  position: relative;
+  font-weight: bold;
+  padding-left: 26%;
+  top: 12%;
+}
+.p-tag {
+  margin: 0%;
+  font-weight: bold;
+  padding-left: 23%;
+  padding-right: 10%;
+  padding-bottom: 21%;
+  text-align: left;
+}
 .footer {
   background-color: rgb(41, 61, 113);
   color: aliceblue;
@@ -79,4 +116,37 @@ html {
 #footer-txt {
   margin-top: 0;
   padding-top: 1.5%;
+}
+
+.slideshow-container {
+  margin-bottom: 0%;
+  padding: 10px;
+  position: relative;
+  background-color: hsla(240, 33%, 25%, 0.7);
+}
+.mySlides {
+  display: none;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+  margin: 0.3em;
+}
+
+.column1 {
+  margin-left: 25%;
+}
+
+img {
+  vertical-align: middle;
+  width: 100px;
+  height: 125px;
+  object-fit: cover;
 }

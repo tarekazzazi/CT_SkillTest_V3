@@ -16,11 +16,54 @@
     </div>
     <div class="content">
       <div class="bg-image img1"></div>
-      <div class="bg-image img2"></div>
+      <div class="bg-image img2">
+        <div class="txt-sub-header" id="overlay">HISTORY</div>
+        <h2 class="txt-header">01.</h2>
+        <p class="p-tag" id="overlay">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <!-- image slider  -->
+        <div class="slideshow-container">
+          <div class="row">
+            <div class="column column1">
+              <img
+                class="demo cursor"
+                src="./images/Mtn_Page_1.png"
+                style="width: 100%"
+                onclick="currentSlide(1)"
+                alt="The Woods"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="./images/Mtn_Page_2.png"
+                style="width: 100%"
+                onclick="currentSlide(2)"
+                alt="Cinque Terre"
+              />
+            </div>
+            <div class="column">
+              <img
+                class="demo cursor"
+                src="./images/Mtn_Page_3.png"
+                style="width: 100%"
+                onclick="currentSlide(3)"
+                alt="Mountains and fjords"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- end -->
+      </div>
       <div class="bg-image img3"></div>
-
       <div class="bg-text" id="Heading-1">LOSANGELES</div>
-
       <div class="bg-text" id="Heading-2">MOUNTAINS</div>
     </div>
     <script>
@@ -37,6 +80,40 @@
         } else {
           navbar.classList.remove("sticky");
         }
+      }
+    </script>
+
+    <!-- image slider -->
+    <script>
+      // Next/previous controls
+      function plusSlides(n) {
+        showSlides((slideIndex += n));
+      }
+
+      // Thumbnail image controls
+      function currentSlide(n) {
+        showSlides((slideIndex = n));
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("demo");
+        let captionText = document.getElementById("caption");
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[slideIndex - 1].className += " active";
+        captionText.innerHTML = dots[slideIndex - 1].alt;
       }
     </script>
     <footer class="footer">
